@@ -1,0 +1,40 @@
+APIs Documentation to interact between control centre and submarines...
+
+Submarines control centre APIs
+--------------------------------
+
+1. Get the list of registered submarines
+    Request:
+        Method: GET
+        URL: http://localhost:5000/submarines
+    Response:
+        {
+            "submarines": [
+                "gamma",
+                "beta"
+            ]
+        }
+
+2. Control centre message
+    Request:
+        Method: POST
+        URL: http://localhost:5000/message
+        Payload as Form_data:
+            sub_name:beta
+            message:hide yourself
+    Response:
+        {
+            "status": "published",
+            "submarine_name": "gamma"
+        }
+
+3. Submarines registration
+    Request:
+        Method: GET
+        URL: http://localhost:5001/register_submarine/gamma
+    Response:
+        {
+            "status": "registered",
+            "submarine_name": "gamma"
+        }
+
