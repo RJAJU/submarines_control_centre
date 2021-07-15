@@ -39,7 +39,7 @@ class MySubscribeCallback(SubscribeCallback):
   def message(self, pubnub, event):
     print("[MESSAGE received]")
 
-    if event.message["update"] == "42":
+    if event.message["update"] == "hide":
       print("The publisher has ended the session.")
       os._exit(0)
     else:
